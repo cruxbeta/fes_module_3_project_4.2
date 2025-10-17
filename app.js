@@ -99,14 +99,46 @@
 // }
 // console.log(reverseString(`abc`));
 
-// MODIFYING ARRAY DATA - for loop
-function convertZero(arr) {
-    let zeroArr = [];
+
+
+// // MODIFYING ARRAY DATA - for loop
+// function convertZero(arr) {
+//     let zeroArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         zeroArr[i] = 0;
+//     }
+//     return zeroArr;
+// }
+// console.log(convertZero([5, 100, 0]));
+// console.log(convertZero([12]));
+// console.log(convertZero([1, 2 , 3, 4, 5, 6]));
+
+// // MODIFYING ARRAY DATA - array `fill`
+// function convertZero(arr) {
+//     return new Array(arr.length).fill(0);
+// }
+// console.log(convertZero([5, 100, 0]));
+// console.log(convertZero([12]));
+// console.log(convertZero([1, 2 , 3, 4, 5, 6]));
+
+// // MODIFYING ARRAY DATA - array .map method
+// function convertZero(arr) {
+//     return arr.map(elem => 0);
+// }
+// console.log(convertZero([5, 100, 0]));
+// console.log(convertZero([12]));
+// console.log(convertZero([1, 2 , 3, 4, 5, 6]));
+
+// FILTERING AN ARRAY - for loop
+function noApples(arr) {
+    let newArr = []
     for (let i = 0; i < arr.length; i++) {
-        zeroArr[i] = 0;
+        if (arr[i] !== `Apple`) {
+            newArr.push(noApples[i]);
+        }
     }
-    return zeroArr;
+    return newArr;
 }
-console.log(convertZero[5, 100, 0]);
-console.log(convertZero[12]);
-console.log(convertZero[1, 2 , 3, 4, 5, 6]);
+console.log(noApples([`Banana`, `Apple`, `Orange`, `Apple`]));
+console.log(noApples([`Tomato`, `Orange`, `Banana`]));
+console.log(noApples([`Banana`, `Orange`, `Apple`]));
