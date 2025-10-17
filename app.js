@@ -129,16 +129,46 @@
 // console.log(convertZero([12]));
 // console.log(convertZero([1, 2 , 3, 4, 5, 6]));
 
-// FILTERING AN ARRAY - for loop
-function noApples(arr) {
-    let newArr = []
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] !== `Apple`) {
-            newArr.push(noApples[i]);
-        }
-    }
-    return newArr;
+// // FILTERING AN ARRAY - for loop
+// function noApples(arr) {
+//     let newArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] !== `Apple`) {
+//             newArr.push(arr[i]);
+//         }
+//     }
+//     return newArr;
+// }
+// console.log(noApples([`Banana`, `Apple`, `Orange`, `Apple`]));
+// console.log(noApples([`Tomato`, `Orange`, `Banana`]));
+// console.log(noApples([`Banana`, `Orange`, `Apple`]));
+
+// // FILTERING AN ARRAY - .filter method
+// function noApples(arr) {
+//     return arr.filter(elem => elem !== `Apple`)
+// }
+// console.log(noApples([`Banana`, `Apple`, `Orange`, `Apple`]));
+// console.log(noApples([`Tomato`, `Orange`, `Banana`]));
+// console.log(noApples([`Banana`, `Orange`, `Apple`]));
+
+// // FILTERING FALSY VALUES - for loop
+// function noFalsy(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let newArr = []
+//         if (arr[i] !== noFalsy) {
+//             newArr.push(arr[i]);
+//         }
+//     }
+//     return newArr;
+// }
+// console.log(['', [], 0, null, undefined, `0`])
+// console.log([`Tomato`, `Orange`, `Banana`, false])
+// console.log([`Banana`, `Orange`, `Apple`])
+
+// FILTERING FALSY VALUES - .filter method
+function noFalsy(arr) {
+    return arr.filter(elem => !!elem === true)
 }
-console.log(noApples([`Banana`, `Apple`, `Orange`, `Apple`]));
-console.log(noApples([`Tomato`, `Orange`, `Banana`]));
-console.log(noApples([`Banana`, `Orange`, `Apple`]));
+console.log(noFalsy['', [], 0, null, undefined, `0`]);
+console.log(noFalsy[`Tomato`, `Orange`, `Banana`, false]);
+console.log(noFalsy[`Banana`, `Orange`, `Apple`]);
